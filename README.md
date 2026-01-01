@@ -29,7 +29,7 @@
 9. **Template Method Pattern:** Template Method Pattern defines the skeleton of an algorithm in a base class, while allowing subclasses to override specific steps without changing the overall flow
 10. **Visitor Pattern:** Allows us to separate an algorithm from an Object Structure on which it operates.
 
-### Mental Models for Design Patterns
+## Mental Models for Design Patterns
 
 #### Creational Patterns 🏗️
 
