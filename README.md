@@ -19,3 +19,5 @@
 ## Behavioral Patterns
 
 1. **Chain Of Responsibility Pattern:** Use Chain of Responsibility when request processing has multiple independent steps and you want to avoid if–else hell.
+2. **Command Pattern:** Encapsulate an action as an object so that the caller (UI/controller) is decoupled from the actual logic. This makes it easy to add new actions, queue actions, log them, or support undo/redo (e.g., editor commands, button actions in web apps).
+3. 
