@@ -6,7 +6,6 @@
 4. **Prototype Pattern:** Clone/copy objects efficiently, especially to avoid costly constructor calls.
 5. **Singleton Pattern:** Ensure only one instance of a class exists throughout the application.
 
-
 ## Structural Patterns
 
 1. **Adapter Pattern (Wrapper):** Make incompatible classes, APIs, or methods work together via interfaces and adapter classes.
@@ -16,3 +15,7 @@
 5. **Facade Pattern:** Provide a simple interface to access a group of complex subsystems, hiding internal complexity.
 6. **Flyweight Pattern:** When you create many objects that repeat the same data, Flyweight saves memory by sharing that common data instead of duplicating it
 7. **Proxy Pattern:** Use Proxy when you want to add behavior before or after accessing a real object — without modifying it.
+
+## Behavioral Patterns
+
+1. **Chain Of Responsibility Pattern:** Use Chain of Responsibility when request processing has multiple independent steps and you want to avoid if–else hell.
