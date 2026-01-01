@@ -15,3 +15,4 @@
 4. **Decorator Pattern:** Dynamically add new behaviors by wrapping objects, without changing the original class. Supports flexible stacking/removal of behaviors like caching, logging, etc.
 5. **Facade Pattern:** Provide a simple interface to access a group of complex subsystems, hiding internal complexity.
 6. **Flyweight Pattern:** When you create many objects that repeat the same data, Flyweight saves memory by sharing that common data instead of duplicating it
+7. **Proxy Pattern:** Use Proxy when you want to add behavior before or after accessing a real object — without modifying it.
