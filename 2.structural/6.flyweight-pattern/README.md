@@ -1,61 +1,78 @@
-When you create many objects that repeat the same data, Flyweight saves memory by sharing that common data instead of duplicating it.
+When you create many objects that repeat the same data, **Flyweight saves memory by sharing that common data instead of duplicating it.**
 
-Consider Game characters / bullets / trees / letters in a document
+---
 
-10,000 soldiers on screen
+**Consider:**  
+_Game characters_ / _bullets_ / _trees_ / _letters in a document_
+
+**Example:**  
+**10,000 soldiers on screen**
 
 Each soldier has:
+- same image
+- same weapon
+- same uniform
+- **Only position (x, y) changes**
 
-same image
-same weapon
-same uniform
-Only position (x, y) changes
+---
 
-❌ Creating everything again and again = wasted memory
+❌ **Creating everything again and again = wasted memory**
 
-1,000 trees = 1,000 copies of same data
-High memory usage
+- 1,000 trees = 1,000 copies of same data
+- High memory usage
 
-Why Flyweight is better (simple comparison)
-Without Flyweight With Flyweight
-Many duplicate objects One shared object
-High memory usage Low memory usage
-Slow for large data Fast & scalable
-Hard to optimize Easy to control
-One-line intuition (very important 🔥)
+---
 
-Facade simplifies usage
-Flyweight optimizes memory
+### Why Flyweight is better (simple comparison)
 
-When should YOU think of Flyweight?
+| Without Flyweight         | With Flyweight        |
+|--------------------------|----------------------|
+| Many duplicate objects   | One shared object    |
+| High memory usage        | Low memory usage     |
+| Slow for large data      | Fast & scalable      |
+| Hard to optimize         | Easy to control      |
 
-✔ When you see:
+---
 
-Thousands / millions of similar objects
+**One-line intuition (very important 🔥):**
 
-Most data is same
+- _Facade_ **simplifies usage**
+- _Flyweight_ **optimizes memory**
 
-Only few fields change (position, id, state)
+---
 
-❌ Don’t use when:
+### When should YOU think of Flyweight?
 
-Objects are very different
+✔ **When you see:**
+- Thousands / millions of similar objects
+- Most data is same
+- Only few fields change (position, id, state)
 
-Memory is not a concern
+❌ **Don’t use when:**
+- Objects are very different
+- Memory is not a concern
 
-Ultra-short analogy
+---
 
-📄 Word document
+### Ultra-short analogy
 
-10,000 letters “A”
+📄 **Word document**
 
-Font & shape stored once
+- 10,000 letters “A”
+    - Font & shape stored *once*
+    - Position stored *separately*
+- ➡️ That’s Flyweight
 
-Position stored separately
-➡️ That’s Flyweight
+---
 
-The Flyweight pattern always involves caching and reuse of objects, because its core purpose is to reduce memory usage by sharing common (intrinsic) data instead of duplicating it. This caching is in-memory and object-level, usually implemented via a factory that stores already created flyweight objects and returns the same instance when requested again. Without this reuse mechanism, the pattern provides no benefit and effectively stops being a Flyweight. It’s important to note that this is not external caching like Redis or databases, but a lightweight, per-process cache meant purely for efficient object sharing.
+The Flyweight pattern always involves **caching and reuse of objects**, because its core purpose is to reduce memory usage by sharing common (intrinsic) data instead of duplicating it.  
+This caching is in-memory and object-level, usually implemented via a factory that stores already created flyweight objects and returns the same instance when requested again.
 
+> Without this reuse mechanism, the pattern provides no benefit and effectively stops being a Flyweight. It’s important to note that this is not external caching like Redis or databases, but a lightweight, per-process cache meant purely for efficient object sharing.
+
+```php
 class TreeFactory {
-private static array $treeTypes = []; // 👈 THIS is the cache
+    private static array $treeTypes = []; // 👈 THIS is the cache
 }
+```
+
