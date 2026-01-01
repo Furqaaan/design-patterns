@@ -22,3 +22,4 @@
 2. **Command Pattern:** Encapsulate an action as an object so that the caller (UI/controller) is decoupled from the actual logic. This makes it easy to add new actions, queue actions, log them, or support undo/redo (e.g., editor commands, button actions in web apps).
 3. **Iterator Pattern:** The Iterator Pattern is essential for iterating over collections/data in a structured and maintainable way
 4. **Mediator Pattern:** Use Mediator when multiple components need to communicate with each other, and you want to centralize and control their interactions to reduce tight coupling
+5. **Memento Pattern:** Memento Pattern captures an object’s state so it can be restored later without violating encapsulation.
