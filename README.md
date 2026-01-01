@@ -104,6 +104,3 @@
 
 - **Visitor:**  
   _Add new operations to objects without changing their classes._
-
-- **Interpreter:**  
-  _Define a language and interpret its expressions within the context._
